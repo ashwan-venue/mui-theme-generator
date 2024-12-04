@@ -18,7 +18,7 @@ const PreviewWrapper = ({ children }: PreviewWrapperProps) => {
       height: 1,
       position: "relative",
     }}>
-      <PreviewSizeControls />
+      {/* <PreviewSizeControls /> */}
       <ThemeWrapper>
         <Box sx={{
           bgcolor: "#212121",
