@@ -14,7 +14,9 @@ import TypographyExample from "../MuiComponentSamples/Samples/Typography"
 import { useSelector } from "react-redux"
 import { RootState } from "src/state/types"
 import ImageBackground from "../../images/1.png";
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import Hero from "../SidearmComponents/hero"
+import Event from "../SidearmComponents/Event"
+
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -64,19 +66,9 @@ const PreviewWindow = () => {
         previewComponents.appHeader ? <AppBarExample onDrawerButtonClick={toggleDrawer} /> : null
       }
       <Grid container py={4} px={2} display={'flex'} alignItems={"center"} width={1} height={1} sx={{ backgroundSize:'cover', backgroundImage:`url(${ImageBackground})`}}>
-      <Grid sm={8} item>
-        <Chip sx={{borderRadius:'8px'}} color="secondary" label="Volleyball"/>
-        <Typography variant="h1">Volleyball Hosts Miami And No. 19 Florida State This Weekend</Typography>
-        <Typography variant="body2">10/17/202 | 12:58:00 PM</Typography>
-        <Grid pt={3} display={"flex"} alignItems={'center'} columnGap={2}>
-        <Button color="error" variant="outlined" startIcon={<PlayArrowIcon/>}>Watch Highlights</Button>
-        <Link color="Info" underline="none">Read More</Link>
-        </Grid>
+      <Hero/>
+      <Event/>
 
-      </Grid>
-      <Grid sm={4}>
-
-      </Grid>
       </Grid>
 
     </PreviewWrapper>
