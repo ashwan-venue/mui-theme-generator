@@ -10,6 +10,10 @@ import { RootState } from "src/state/types";
 const drawerWidth: React.CSSProperties["width"] = 200;
 const previewComponents = [
   {
+    id: "all",
+    title: "All",
+  }, 
+  {
     id: "appHeader",
     title: "App Header",
   },

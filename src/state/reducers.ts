@@ -29,6 +29,7 @@ const initialState: RootState = {
   loadedFonts: new Set(),
   activeTab: "preview",
   previewComponents : {
+    all: true,
     appHeader: true,
     eventSchedule: true,
     heroText: true,
@@ -165,12 +166,29 @@ export default (state = initialState, action: any) => {
         activeTab: action.tab,
       }
     case "SET_PREVIEW_COMPONENTS": {
-      let oldPreviewComponents:any = {...state.previewComponents};
-      if(oldPreviewComponents[action.sidearms]) {
-        oldPreviewComponents[action.sidearms] = false;
+      // let oldPreviewComponents:any = {...state.previewComponents};
+      let oldPreviewComponents:any = {};
+      if(action.sidearms === "all") {
+        oldPreviewComponents = {
+          all: true,
+          appHeader: true,
+          eventSchedule: true,
+          heroText: true,
+        }
       } else {
+        oldPreviewComponents = {
+          all: false,
+          appHeader: false,
+          eventSchedule: false,
+          heroText: false,
+        }
         oldPreviewComponents[action.sidearms] = true;
       }
+      // if(oldPreviewComponents[action.sidearms]) {
+      //   oldPreviewComponents[action.sidearms] = false;
+      // } else {
+      //   oldPreviewComponents[action.sidearms] = true;
+      // }
       return {
         ...state,
         previewComponents: oldPreviewComponents,
