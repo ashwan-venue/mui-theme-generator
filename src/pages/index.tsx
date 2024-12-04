@@ -37,7 +37,7 @@ const IndexPage = () => {
                 display: "flex",
                 minHeight: 0,
               }}>
-                {/* <ComponentNavDrawer /> */}
+                <ComponentNavDrawer />
 
                 <Box component="main" sx={{
                   minWidth: 0,

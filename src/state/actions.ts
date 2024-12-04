@@ -199,3 +199,8 @@ export const resetTutorialStep = () => ({ type: "RESET_TUTORIAL_STEP" })
 export const toggleTutorial = () => ({ type: "TOGGLE_TUTORIAL" })
 
 export const resetSiteData = () => ({ type: "RESET_SITE_DATA" })
+
+/**
+ * Set the active tab for the editor page
+ */
+export const setSideArms = (sidearms: string) => ({ type: "SET_PREVIEW_COMPONENTS", sidearms })

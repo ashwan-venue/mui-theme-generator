@@ -11,11 +11,17 @@ export interface RootState {
   loadedFonts: Set<string>;
   activeTab: string;
   previewSize: PreviewSize;
+  previewComponents: previewComponents;
   tutorialStep: number;
   tutorialOpen: boolean;
   componentNavOpen: boolean;
   themeConfigOpen: boolean;
   mobileWarningSeen: boolean;
+}
+
+export type previewComponents = { 
+  appHeader: boolean;
+  hero: boolean;
 }
 
 export type SavedTheme = {

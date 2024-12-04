@@ -28,6 +28,10 @@ const initialState: RootState = {
   },
   loadedFonts: new Set(),
   activeTab: "preview",
+  previewComponents : {
+    appHeader: false,
+    hero: false
+  },
   previewSize: false,
   tutorialStep: 0,
   tutorialOpen: false,
@@ -159,6 +163,18 @@ export default (state = initialState, action: any) => {
         ...state,
         activeTab: action.tab,
       }
+    case "SET_PREVIEW_COMPONENTS": {
+      let oldPreviewComponents:any = {...state.previewComponents};
+      if(oldPreviewComponents[action.sidearms]) {
+        oldPreviewComponents[action.sidearms] = false;
+      } else {
+        oldPreviewComponents[action.sidearms] = true;
+      }
+      return {
+        ...state,
+        previewComponents: oldPreviewComponents,
+      }
+    }
     case "SET_PREVIEW_SIZE":
       return {
         ...state,

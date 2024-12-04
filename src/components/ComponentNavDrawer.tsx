@@ -4,10 +4,20 @@ import {
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import componentSamples from "src/components/MuiComponentSamples/Samples";
-import { setActiveTab } from "src/state/actions";
+import { setActiveTab, setSideArms } from "src/state/actions";
 import { RootState } from "src/state/types";
 
-const drawerWidth: React.CSSProperties["width"] = 200
+const drawerWidth: React.CSSProperties["width"] = 200;
+const previewComponents = [
+  {
+    id: "appHeader",
+    title: "App Header",
+  },
+  {
+    id: "hero",
+    title: "Hero",
+  }
+]
 
 export const componentNavDrawerId = "component-nav-drawer"
 
@@ -17,6 +27,13 @@ const ComponentNavDrawer = () => {
   const open = useSelector((state: RootState) => state.componentNavOpen)
 
   const dispatch = useDispatch()
+
+  const handlePreviewClick = (id:string) => {
+    // dispatch({ type: "TOGGLE_COMPONENT_NAV" })
+    dispatch(setSideArms(id))
+    dispatch(setActiveTab("preview"))
+  };
+
   const handleClick = React.useCallback(() => {
     dispatch({ type: "TOGGLE_COMPONENT_NAV" })
     dispatch(setActiveTab("components"))
@@ -40,6 +57,24 @@ const ComponentNavDrawer = () => {
       anchor="left"
       onClose={() => dispatch({ type: "TOGGLE_COMPONENT_NAV" })}
     >
+      <List dense sx={{ bgcolor: 'background.paper' }}>
+        <ListSubheader>Sidearm</ListSubheader>
+        {previewComponents.map(({ id, title }) => (
+          <ListItemButton
+            key={id}
+            href={`#${id}`}
+            onClick={() => {handlePreviewClick(id)}}
+          >
+            <ListItemText
+              primary={title}
+              sx={{ pl: 2 }}
+              primaryTypographyProps={{
+                variant: "body2",
+              }}
+            />
+          </ListItemButton>
+        ))}
+      </List>
       <List dense sx={{ bgcolor: 'background.paper' }}>
         <ListSubheader>Components</ListSubheader>
         {componentSamples.map(({ id, title }) => (

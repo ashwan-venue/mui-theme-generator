@@ -49,8 +49,8 @@ const MainWindow = () => {
         }}
       >
         <Tab label="Preview" value="preview" id={previewTabId} sx={tabStyle} />
-        {/* <Tab label="Components" value="components" id={componentsTabId} sx={tabStyle} />
-        <Tab label="Saved Themes" value="saved" id={savedThemesTabId} sx={tabStyle} /> */}
+        <Tab label="Components" value="components" id={componentsTabId} sx={tabStyle} />
+        <Tab label="Saved Themes" value="saved" id={savedThemesTabId} sx={tabStyle} />
       </Tabs>
       <Hidden smUp>
         <IconButton onClick={() => dispatch({ type: "TOGGLE_THEME_CONFIG" })} size="large">

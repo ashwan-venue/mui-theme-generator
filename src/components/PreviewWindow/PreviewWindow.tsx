@@ -11,28 +11,8 @@ import PreviewWrapper from "./PreviewWrapper"
 import DrawerExample from "./Samples/DrawerExample"
 import { LoadingButton } from "@mui/lab"
 import TypographyExample from "../MuiComponentSamples/Samples/Typography"
-
-interface TabPanelProps {
-  children?: React.ReactNode
-  index: any
-  value: any
-}
-
-function TabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && <div>{children}</div>}
-    </div>
-  )
-}
+import { useSelector } from "react-redux"
+import { RootState } from "src/state/types"
 
 export const previewNavTabsId = "preview-nav-tabs"
 
@@ -41,8 +21,9 @@ const tabStyle = {
 }
 
 const PreviewWindow = () => {
+  const previewComponents = useSelector((state: RootState) => state.previewComponents)
   const [tabIndex, setTabIndex] = React.useState(0);
-  const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const [drawerOpen, setDrawerOpen] = React.useState(true);
   const [subHeaderTab, setsubHeaderTab] = useState('search')
 
 
@@ -55,7 +36,10 @@ const PreviewWindow = () => {
 
   return (
     <PreviewWrapper>
-      <AppBarExample onDrawerButtonClick={toggleDrawer} />
+      {
+        previewComponents.appHeader ? <AppBarExample onDrawerButtonClick={toggleDrawer} /> : null
+      }
+      
     </PreviewWrapper>
   )
 }
