@@ -25,19 +25,19 @@ const IndexPage = () => {
               flexDirection: "column",
               minWidth: 0,
             }}>
-              <Header sx={{
+              {/* <Header sx={{
                 backgroundColor: "#000000",
                 position: {
                   md: 'static'
                 }
-              }} />
+              }} /> */}
 
               <Box sx={{
                 flex: 1,
                 display: "flex",
                 minHeight: 0,
               }}>
-                <ComponentNavDrawer />
+                {/* <ComponentNavDrawer /> */}
 
                 <Box component="main" sx={{
                   minWidth: 0,
