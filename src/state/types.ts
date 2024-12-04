@@ -21,7 +21,8 @@ export interface RootState {
 
 export type previewComponents = { 
   appHeader: boolean;
-  hero: boolean;
+  eventSchedule: boolean;
+  heroText: boolean;
 }
 
 export type SavedTheme = {

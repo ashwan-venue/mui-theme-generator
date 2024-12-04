@@ -29,8 +29,9 @@ const initialState: RootState = {
   loadedFonts: new Set(),
   activeTab: "preview",
   previewComponents : {
-    appHeader: false,
-    hero: false
+    appHeader: true,
+    eventSchedule: true,
+    heroText: true,
   },
   previewSize: false,
   tutorialStep: 0,

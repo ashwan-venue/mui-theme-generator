@@ -14,9 +14,14 @@ const previewComponents = [
     title: "App Header",
   },
   {
-    id: "hero",
-    title: "Hero",
+    id: "eventSchedule",
+    title: "Event Schedule",
+  },
+  {
+    id: "heroText",
+    title: "Hero Text",
   }
+
 ]
 
 export const componentNavDrawerId = "component-nav-drawer"
