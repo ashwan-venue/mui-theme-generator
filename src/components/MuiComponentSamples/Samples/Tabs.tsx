@@ -60,6 +60,7 @@ export default function TabsExample() {
           onChange={handleChange}
           aria-label="simple tabs example"
           textColor="primary"
+          sx={{border:'1px solid #ececec'}}
         >
           <Tab label="Upcoming" {...a11yProps(0)} />
           <Tab label="Results" {...a11yProps(1)} />

@@ -109,7 +109,7 @@ export default function AppBarExample({ onDrawerButtonClick }: Props) {
   // )
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box>
       <Tooltip title={`<AppBar color="primary">`} placement="left" arrow>
       <AppBar position="static">
       <Container maxWidth="xl">

@@ -46,7 +46,7 @@ const ThemeConfigDrawer = () => {
         <Grid item sx={{
           flexGrow: 1,
           minHeight: "30vh",
-          maxHeight: "50vh",
+          maxHeight: "75vh",
           height: 1,
         }}>
           {/* Use themeId as key so that editor is torn down and rebuilt with new theme */}
