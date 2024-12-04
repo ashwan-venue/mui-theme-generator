@@ -1,10 +1,10 @@
 module.exports = {
-  pathPrefix: `/mui-theme-creator`,
+  pathPrefix: `/mui-theme-generator.io`,
   siteMetadata: {
     title: `Material-UI Theme Creator`,
     description: `Kick off your next, great Material-UI project with a customized theme.`,
     author: `@zenoo`,
-    url: "https://zenoo.github.io/mui-theme-creator",
+    url: "https://dheerajkumarsqm.github.io/mui-theme-generator.io",
   },
   plugins: [
     `gatsby-plugin-react-helmet-async`,

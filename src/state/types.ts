@@ -20,6 +20,7 @@ export interface RootState {
 }
 
 export type previewComponents = { 
+  all: boolean;
   appHeader: boolean;
   eventSchedule: boolean;
   heroText: boolean;
