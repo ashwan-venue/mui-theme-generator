@@ -51,9 +51,7 @@ const DrawerExample = ({ open, onClose }: Props) => {
       }}
     >
       <Toolbar />
-      <List>{mainListItems}</List>
-      <Divider />
-      <List>{secondaryListItems}</List>
+
     </Drawer>
   )
 }
