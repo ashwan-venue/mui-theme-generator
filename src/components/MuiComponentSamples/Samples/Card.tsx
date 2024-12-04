@@ -37,8 +37,8 @@ export default function CardExample() {
   return (
     <Grid container spacing={2}>
       <Grid item width={1}>
-        <Card sx={{ width: '100%', marginBottom:'10px' }}>
-          <CardContent sx={{padding: '12px 16px 16px'}}>
+        <Card variant={'outlined'} sx={{ width: '100%', marginBottom:'10px' }}>
+          <CardContent sx={{padding: '12px 16px 16px', marginBottom:'-8px'}}>
             <Stack display={'flex'} direction={'row'} justifyContent='space-between'>
               <Typography
                 sx={{ fontSize: 12 }}
@@ -52,70 +52,70 @@ export default function CardExample() {
               </Typography>
 
             </Stack>
-            <List>
-                <ListItem sx={{padding:0, paddingBottom:'8px'}}>
-                  <img src={Logo1}/>
-                  <Typography fontSize="15"  fontWeight="800" color="primary">Women's Soccer</Typography>
+            <List sx={{padding:0}}>
+                <ListItem sx={{padding:0, paddingBottom:'8px', paddingTop:'10px'}}>
+                  <img width={24} src={Logo1}/>
+                  <Typography fontSize="15" ml={1}  fontWeight="800" color="primary">Women's Soccer</Typography>
                 </ListItem>
                 <ListItem sx={{padding:0}}>
-                <img src={Logo2}/>
-                  <Typography fontSize="14"  fontWeight="400" color="textSecondary">vs NC State</Typography>
+                <img width={24} src={Logo2}/>
+                  <Typography fontSize="14" ml={1}  fontWeight="400" color="textSecondary">vs NC State</Typography>
                 </ListItem>
               </List>
           </CardContent>
         </Card>
 
-        <Card sx={{ width: '100%', marginBottom:'10px' }}>
-          <CardContent sx={{padding: '12px 16px 16px'}}>
+        <Card  variant={'outlined'} sx={{ width: '100%', marginBottom:'10px', }}>
+          <CardContent sx={{padding: '12px 16px 16px', marginBottom:'-8px'}}>
             <Stack display={'flex'} direction={'row'} justifyContent='space-between'>
               <Typography
                 sx={{ fontSize: 12 }}
                 color="textSecondary"
                 gutterBottom
               >
-              Oct 19 | 11:00 am PT
+              Oct 19 | 11:20 am PT
               </Typography>
               <Typography sx={{ fontSize: 12 }} color="textSecondary">
                 Final
               </Typography>
 
             </Stack>
-            <List>
-                <ListItem sx={{padding:0, paddingBottom:'8px'}}>
-                  <img src={Logo1}/>
-                  <Typography fontSize="15"  fontWeight="800" color="primary">Women's Soccer</Typography>
+            <List sx={{padding:0}}>
+                <ListItem sx={{padding:0, paddingBottom:'8px', paddingTop:'10px'}}>
+                  <img width={24} src={Logo1}/>
+                  <Typography fontSize="15" ml={1}  fontWeight="800" color="primary">Men's Soccer</Typography>
                 </ListItem>
                 <ListItem sx={{padding:0}}>
-                <img src={Logo2}/>
-                  <Typography fontSize="14"  fontWeight="400" color="textSecondary">vs NC State</Typography>
+                <img width={24} src={Logo3}/>
+                  <Typography fontSize="14" ml={1}  fontWeight="400" color="textSecondary">vs NC State</Typography>
                 </ListItem>
               </List>
           </CardContent>
         </Card>
 
-        <Card sx={{ width: '100%' }}>
-          <CardContent sx={{padding: '12px 16px 16px'}}>
+        <Card  variant={'outlined'} sx={{ width: '100%' }}>
+          <CardContent sx={{padding: '12px 16px 16px', marginBottom:'-8px'}}>
             <Stack display={'flex'} direction={'row'} justifyContent='space-between'>
               <Typography
                 sx={{ fontSize: 12 }}
                 color="textSecondary"
                 gutterBottom
               >
-              Oct 19 | 11:00 am PT
+              Oct 20 | 02:20 pm PT
               </Typography>
               <Typography sx={{ fontSize: 12 }} color="textSecondary">
                 Final
               </Typography>
 
             </Stack>
-            <List>
-                <ListItem sx={{padding:0, paddingBottom:'8px'}}>
-                  <img src={Logo1}/>
-                  <Typography fontSize="15"  fontWeight="800" color="primary">Women's Soccer</Typography>
+            <List sx={{padding:0}}>
+                <ListItem sx={{padding:0, paddingBottom:'8px', paddingTop:'10px'}}>
+                  <img width={24} src={Logo2}/>
+                  <Typography fontSize="15" ml={1}  fontWeight="800" color="primary">Women's Soccer</Typography>
                 </ListItem>
                 <ListItem sx={{padding:0}}>
-                <img src={Logo2}/>
-                  <Typography fontSize="14"  fontWeight="400" color="textSecondary">vs NC State</Typography>
+                <img width={24} src={Logo3}/>
+                  <Typography fontSize="14" ml={1}  fontWeight="400" color="textSecondary">vs NC State</Typography>
                 </ListItem>
               </List>
           </CardContent>

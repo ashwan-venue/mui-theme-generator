@@ -10,7 +10,7 @@ export default function Event() {
       {
         previewComponents.eventSchedule ?
           <Box sx={{ height: '70vh', overflow: 'auto', backgroundColor: '#ffffff', borderRadius: 2 }}>
-            <Typography color='textSecondary' sx={{ padding: '10px' }} variant="h5">EVENT SCHEDULE</Typography>
+            <Typography color='textSecondary' px={3} py={2} sx={{ padding: '' }} variant="h5">EVENT SCHEDULE</Typography>
             <Divider />
             <TabsExample />
           </Box> : null

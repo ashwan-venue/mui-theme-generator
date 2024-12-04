@@ -127,6 +127,7 @@ export default function AppBarExample({ onDrawerButtonClick }: Props) {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
+              pl:1
             }}
           >
             <img src={LOGO} height={22}/>
@@ -190,9 +191,10 @@ export default function AppBarExample({ onDrawerButtonClick }: Props) {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
+                color="info"
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, display: 'block' }}
               >
                 {page}
               </Button>

@@ -62,13 +62,13 @@ const PreviewWindow = () => {
 
   return (
     <PreviewWrapper>
-      <Grid display={'flex'} flexDirection='column' width={1} height={1}>
+      <Grid display={'flex'} flexDirection='column' width={'1440px'} height={1}>
         {
           previewComponents.appHeader ?
             <AppBarExample onDrawerButtonClick={toggleDrawer} /> :
             null
         }
-        <Grid container py={4} px={2} display={'flex'} alignItems={"center"} width={1} flex={1} sx={{ backgroundSize: 'cover', backgroundImage: `url(${ImageBackground})` }}>
+        <Grid container justifyContent={'space-between'} py={4} px={'60px'} display={'flex'} alignItems={"center"} width={1} flex={1} sx={{ backgroundSize: 'cover', backgroundImage: `url(${ImageBackground})` }}>
           <Hero />
           <Event />
         </Grid>
