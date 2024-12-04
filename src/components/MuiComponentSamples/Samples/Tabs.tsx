@@ -6,6 +6,7 @@ import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
 import React from "react";
+import CardExample from "./Card";
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -54,45 +55,22 @@ export default function TabsExample() {
     }}>
       <Box position="static">
         <Tabs
+          variant="fullWidth"
           value={value}
           onChange={handleChange}
           aria-label="simple tabs example"
+          textColor="primary"
         >
-          <Tab label="Recents" {...a11yProps(0)} />
-          <Tab label="Favourites" {...a11yProps(1)} />
-          <Tab label="Nearby" {...a11yProps(2)} />
+          <Tab label="Upcoming" {...a11yProps(0)} />
+          <Tab label="Results" {...a11yProps(1)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        Item One
+        <CardExample/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+      <CardExample/>
       </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
-
-      <Box position="static">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="simple tabs example"
-        >
-          <Tab icon={<PhoneIcon />} label="Recents" {...a11yProps(0)} />
-          <Tab icon={<FavoriteIcon />} label="Favourites" {...a11yProps(1)} />
-          <Tab icon={<PersonPinIcon />} label="Nearby" {...a11yProps(2)} />
-        </Tabs>
       </Box>
-      <TabPanel value={value} index={0}>
-        Item One
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
-    </Box>
   )
 }

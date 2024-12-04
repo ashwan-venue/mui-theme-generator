@@ -14,7 +14,9 @@ import TypographyExample from "../MuiComponentSamples/Samples/Typography"
 import { useSelector } from "react-redux"
 import { RootState } from "src/state/types"
 import ImageBackground from "../../images/1.png";
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import Hero from "../SidearmComponents/hero"
+import Event from "../SidearmComponents/Event"
+
 
 interface TabPanelProps {
   children?: React.ReactNode
@@ -65,7 +67,7 @@ const PreviewWindow = () => {
         <AppBarExample onDrawerButtonClick={toggleDrawer} /> : 
         null
       }
-      <Grid container py={4} px={2} display={'flex'} alignItems={"center"} width={1} height={1} sx={{ backgroundSize: 'cover', backgroundImage: `url(${ImageBackground})` }}>
+      {/* <Grid container py={4} px={2} display={'flex'} alignItems={"center"} width={1} height={1} sx={{ backgroundSize: 'cover', backgroundImage: `url(${ImageBackground})` }}>
         {
           previewComponents.heroText ?
             <Grid sm={8} item>
@@ -80,7 +82,15 @@ const PreviewWindow = () => {
             : null
         }
         <Grid sm={4}>
-        </Grid>
+        </Grid> */}
+      <Grid container py={4} px={2} display={'flex'} alignItems={"center"} width={1} height={1} sx={{ backgroundSize:'cover', backgroundImage:`url(${ImageBackground})`}}>
+      {
+        previewComponents.heroText ? <Hero/> : null
+      }
+      {
+        previewComponents.eventSchedule ? <Event/> : null
+      }
+
       </Grid>
 
     </PreviewWrapper>
